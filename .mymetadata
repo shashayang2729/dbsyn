@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="dbsyn"
+  id="myeclipse.1459310114479"
+  context-root="/dbsyn"
+  j2ee-spec="1.7"
+  archive="dbsyn.war">
+  <attributes>
+    <attribute name="webrootdir" value="src/main/webapp" />
+  </attributes>
+</project-module>
+

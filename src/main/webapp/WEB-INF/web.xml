@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <display-name></display-name>
+  
+  
+  <!-- 加载Spring配置文件 -->
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>
+		classpath*:/applicationContext.xml
+	</param-value>
+  </context-param>
+  
+  
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  
+
+<!--  <servlet>
+        <servlet-name>api</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath*:/spring-mvc.xml</param-value>
+            </init-param> 
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>api</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>-->
+
+  
+  <servlet>
+    <description>t_tender_info</description>
+    <display-name>t_tender_info</display-name>
+    <servlet-name>TenderInfo</servlet-name>
+    <servlet-class>com.minxinloan.servlet.TTenderInfo</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>QueryTel</servlet-name>
+    <servlet-class>com.minxinloan.servlet.QueryTel</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdateTel</servlet-name>
+    <servlet-class>com.minxinloan.servlet.UpdateTel</servlet-class>
+  </servlet>
+  <!--用来测试对接me金融-->
+
+<servlet>
+  <servlet-name>TestWithdraw</servlet-name>
+  <servlet-class>com.minxinloan.servlet.TestWithdraw</servlet-class>
+</servlet>
+  <servlet-mapping>
+    <servlet-name>TestWithdraw</servlet-name>
+    <url-pattern>/TestWithdraw</url-pattern>
+  </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TestResetPwd</servlet-name>
+        <servlet-class>com.minxinloan.servlet.TestResetPwd</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestResetPwd</servlet-name>
+        <url-pattern>/TestResetPwd</url-pattern>
+    </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>TenderInfo</servlet-name>
+    <url-pattern>/TenderInfo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>QueryTel</servlet-name>
+    <url-pattern>/queryTel</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateTel</servlet-name>
+    <url-pattern>/updateTel</url-pattern>
+  </servlet-mapping>	
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
